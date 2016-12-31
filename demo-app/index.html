@@ -7,7 +7,7 @@
         <h1>Hello!</h1>
         <p>This is a sample single-page app.</p>
         <p>
-            Location: <span id="current-location"></span>
+            Location: <span id="loc-path"></span><span id="loc-search"></span><span id="loc-hash"></span>
         </p>
         <ul>
             <li><a href="/">Homepage</a></li>
@@ -20,10 +20,17 @@
                 </ul>
             </li>
             <li><a href="/bar">Bar Page</a></li>
+            <li><a href="/hello/😃?rocket=🚀#penguin-🐧">With query string, fragment and emoji</a></li>
+            <li class="hidden"><a href="/omg/wtf/bbq">😲! 🕴! 🔥🍔!</a></li>
         </ul>
-        <marquee scrollamount="20">
-            <span>Can you believe this still works??</span>
-        </marquee>
+
+        <div id="wtf" style="display:none;position:relative">
+            <span style="color:#000;position:absolute;bottom:20px;left:80px;">This is a SPAS-12!!!1</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/SPAS-12_stock_folded.jpg">
+            <marquee scrollamount="30" direction="right" style="flex:1;margin-top:16px;">
+                <span>Can you believe this still works??</span>
+            </marquee>
+        </div>
         <script src="/js/index.js"></script>
     </body>
 </html>

@@ -1,6 +1,8 @@
 (function() {
 
-    let location_label = document.getElementById('current-location');
+    let loc_path = document.getElementById('loc-path');
+    let loc_search = document.getElementById('loc-search');
+    let loc_hash = document.getElementById('loc-hash');
 
     function handleClick(event) {
         event.preventDefault();
@@ -22,7 +24,12 @@
     function updatePage() {
         let path = document.location.pathname;
         document.title = 'SPAS demo: ' + path;
-        location_label.textContent = path;
+        loc_path.textContent = decodeURIComponent(path);
+        loc_search.textContent = decodeURIComponent(document.location.search);
+        loc_hash.textContent = decodeURIComponent(document.location.hash);
+
+        document.getElementById('wtf').style.display =
+            (path == '/omg/wtf/bbq') ? '': 'none';
     }
 
     updatePage();

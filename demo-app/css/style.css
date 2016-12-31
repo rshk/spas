@@ -19,20 +19,64 @@ a:focus, a:hover {
     background: #0f0;
 }
 
-#current-location {
+#loc-path, #loc-search, #loc-hash {
+    font-family: monospace;
+}
+
+#loc-path {
     background: #00f;
     color: #f0f;
+}
+#loc-search {
+    background: #044;
+    color: #0ff;
+}
+#loc-hash {
+    background: #030;
+    color: #0f0;
 }
 
 marquee > span {
     transition: color 1s, background-color 1s;
-    background: #000;
-    color: #f0f;
+    background: #f0f;
+    color: #008;
     line-height: 40px;
-    padding: 20px;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
 }
 
 marquee.invert > span {
-    background: #f0f;
-    color: #000;
+    background: #f80;
+    color: #a00;
+}
+
+#wtf {
+    display: flex;
+    background: #fff;
+    box-shadow: #00f 0 0 20px 10px;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1200px;
+
+    animation: neon1 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon1 {
+    from {
+        box-shadow: #00f 0 0 20px 10px;
+    }
+    to {
+        box-shadow: #00f 0 0 10px;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+.hidden:hover {
+    opacity: 1;
 }
