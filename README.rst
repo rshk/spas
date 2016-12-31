@@ -24,4 +24,33 @@ Sample usage
 
 This will work nicely to serve the demo app::
 
-    spas --bind 127.0.0.1 --port 8080 --root ./demo-app/ --static js,css,img --default-page index.html
+    spas --bind 127.0.0.1 --port 8000 --root ./demo-app/ --static js,css,img --default-page index.html
+
+Note that, since most options have acceptable defaults, the following
+would do just the same::
+
+    spas --root ./demo-app/
+
+
+Full command help
+=================
+
+::
+
+    usage: spas [-h] [--bind ADDRESS] [--port PORT] [--root ROOT] [--static LIST]
+                [--default-page PATH] [--ssl]
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --bind ADDRESS, -b ADDRESS
+                            Specify alternate bind address [default: all
+                            interfaces]
+      --port PORT, -p PORT  Specify alternate port [default: 8000]
+      --root ROOT           Root directory to serve.
+      --static LIST         Comma-separated list of folders containing static
+                            files. File not found inside one of these folders will
+                            return 404 instead of the default index page.
+      --default-page PATH   Path to the default HTML page to be served for non-
+                            existing paths. Default: index.html. Relative to the
+                            root path.
+      --ssl                 Enable SSL
